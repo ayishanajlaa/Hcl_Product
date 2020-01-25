@@ -1,10 +1,25 @@
 import React from 'react';
 import StarRatings from 'react-star-ratings';
-
+import BookRoom from './bookRoom'
 import hotel from '.././Data/Images/download (2).jpg'
 
 
 class ViewPage extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+           modal:false,
+          };
+        this.bookRoom = this.bookRoom.bind(this);
+      }
+
+
+      bookRoom(){
+          this.setState({modal:!this.state.modal})
+      }
+
+
     render() {
         return (
             <div class="row align-items-center mx-5 my-5">
@@ -12,7 +27,6 @@ class ViewPage extends React.Component {
                 <div class="row">
 
                 </div>
-
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
@@ -32,11 +46,10 @@ class ViewPage extends React.Component {
                                 </div>
                                 <div class="col">
                                     <button class="btn btn-primary mx-3">View Details</button>
-                                    <button class="btn btn-success mx-3">Book Room</button>
+                                    <button class="btn btn-success mx-3" onClick={this.bookRoom}>Book Room</button>
                                 </div>
                             </div>
-
-
+                         <BookRoom modal={this.state.modal} toggle={this.toggle}></BookRoom>
                         </div>
                     </div>
                 </div>
