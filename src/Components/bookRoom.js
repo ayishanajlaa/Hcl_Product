@@ -26,7 +26,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter,FormGroup,Label,Inpu
     return (
       <div>
            <Modal isOpen={modal} toggle={this.props.toggle} >
-        <ModalHeader toggle={this.props.toggle}>Contact Us</ModalHeader>
+        <ModalHeader toggle={this.props.toggle}>Booking Info</ModalHeader>
         <ModalBody>
           <FormGroup>
         <Label >Name</Label>

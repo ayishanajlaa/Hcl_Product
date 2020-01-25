@@ -22,11 +22,18 @@ class ViewPage extends React.Component {
           hotel:data,    modal:false,
         };
         this.toggle = this.toggle.bind(this);
+        this.viewDetails = this.viewDetails.bind(this);
+
       }
       toggle(){
         this.setState({modal:!this.state.modal})
       }
-
+      
+      viewDetails(){
+        this.props.history.push({
+            pathname: '/info',
+           })
+      }
 
     render() {
      var key=this.props.history.location.state.data
@@ -81,8 +88,8 @@ class ViewPage extends React.Component {
                                  <img class="img-circle" src={hotel} alt="Cinque Terre" width="304" height="236" />
                              </div>
                              <div class="col">
-                                 <button class="btn btn-primary mx-3">View Details</button>
-                                 <button class="btn btn-success mx-3">Book Room</button>
+                                 <button class="btn btn-primary mx-3" onClick={this.viewDetails}>View Details</button>
+                                 <button class="btn btn-success mx-3" onClick={this.toggle}>Book Room</button>
                              </div>
                              </div>:null
                                 ))}
