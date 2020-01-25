@@ -1,5 +1,7 @@
 import React from 'react';
 import StarRatings from 'react-star-ratings';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input } from 'reactstrap';
+
 
 import hotel from '.././Data/Images/download (2).jpg'
 
@@ -8,7 +10,28 @@ class ViewPage extends React.Component {
     render() {
         return (
             <div class="row align-items-center mx-5 my-5">
-                <p>Search Results Are:-</p>
+                <div>
+                <Label for="roomType">Price Range</Label>
+                
+            <Input type="select" name="select" id="priceRange">
+              <option>1000-5000</option>
+              <option>5000-10000</option>
+              <option>10000-15000</option>
+              <option>15000-20000</option>
+            </Input>
+            </div>
+            <div>
+                <Label for="roomType">Rating</Label>
+               
+            <Input type="select" name="select" id="ratinng">
+              <option>1 Star</option>
+              <option>2 Star</option>
+              <option>3 Star</option>
+              <option>4 Star</option>
+              <option>5 Star</option>
+            </Input>
+                </div>
+             
                 <div class="row">
 
                 </div>
