@@ -6,7 +6,7 @@ class Footer extends Component {
         return (
             <>             
                 <div>
-                    <h3> &copy; Travel Easy</h3>
+                   
                 </div>
             </>
         );
