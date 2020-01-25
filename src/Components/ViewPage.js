@@ -1,5 +1,7 @@
 import React from 'react';
-function App() {
+class ViewPage extends React.Component {
+    render()
+{
     return (
         <div class="row align-items-center mx-5 my-5">
 
@@ -36,5 +38,6 @@ function App() {
         </div>
     );
 }
+}
 
-export default HomePage;
+export default ViewPage;

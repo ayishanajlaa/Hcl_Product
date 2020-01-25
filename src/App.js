@@ -6,8 +6,8 @@ import {
   Route,
 } from "react-router-dom";
 import './App.css';
-import Home from './Components/ViewPage'
-import Support from './Components/supportDialogue'
+import Home from './Components/homePage'
+import View from './Components/ViewPage'
 
 function App() {
   return (
@@ -16,6 +16,9 @@ function App() {
      <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/view">
+            <View/>
           </Route>
         
         </Switch>
