@@ -6,7 +6,6 @@ import "react-datepicker/dist/react-datepicker.css";
 
 
 
-
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
@@ -35,8 +34,10 @@ class HomePage extends React.Component {
   }
 
   submit() {
-
-  }
+    this.props.history.push({
+      pathname: '/view',
+      state: { data:this.state.location}
+    }) }
 
   render() {
     const { modal } = this.state;
@@ -74,7 +75,9 @@ class HomePage extends React.Component {
           </div>
 
         </div>
-        <Button onClick={() => { this.props.history.push('/view') }}>Submit</Button>
+        {/* <Button onClick={() => { this.props.history.push('/view') }}>Submit</Button> */}
+        <Button onClick={this.submit}>Submit</Button>
+
       </div>
     );
   }

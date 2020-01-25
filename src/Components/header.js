@@ -29,7 +29,7 @@ toggle(){
     const { modal } = this.state;
     return (
       <div>
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-light bg-light" >
           <a class="navbar-brand" style={{"cursor":"pointer"}}  onClick={() => { this.props.history.push('/') }}>Travel Easy</a>
           <ul class="navbar-nav">
             <li class="nav-item active">

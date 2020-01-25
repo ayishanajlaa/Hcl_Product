@@ -1,17 +1,37 @@
 import React from 'react';
 import StarRatings from 'react-star-ratings';
+import { withRouter } from 'react-router-dom';
+import BookRoom from './bookRoom'
+import data from "../Data/data"; 
+
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input } from 'reactstrap';
 
 
 import hotel from '.././Data/Images/download (2).jpg'
 
+const Hotel=data
 
 class ViewPage extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+          hotel:data,    modal:false,
+        };
+        this.toggle = this.toggle.bind(this);
+      }
+      toggle(){
+        this.setState({modal:!this.state.modal})
+      }
+
+
     render() {
+     var key=this.props.history.location.state.data
+     const { modal } = this.state;
         return (
             <div class="row align-items-center mx-5 my-5">
-                <div>
-                <Label for="roomType">Price Range</Label>
+                <div className="mx-5 my-5">
+                <Label for="roomType">Price </Label>
                 
             <Input type="select" name="select" id="priceRange">
               <option>1000-5000</option>
@@ -41,35 +61,42 @@ class ViewPage extends React.Component {
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <div class="row">
+                                {this.state.hotel.map(s => (
+                               key==s.location?
+                                 <div class="row mx-5 my-3">
                                 <div class="col">
-                                    <h2>Hotel Taj</h2>
-                                    <p>Near Vegacitymall,banglore</p>
-                                    <p>Room Price :<strike>1000</strike>&nbsp;900</p>
-                                    <StarRatings
-                                        rating={3}
-                                        starDimension="40px"
-                                        starSpacing="15px"
-                                    />
+                                <h2>{s.name}</h2>
+                                 <p>{s.location}</p>
+                                 <p>Room Price :<strike>1000</strike>&nbsp;{s.price}</p>
+                                 <StarRatings
+                                     rating={s.rating}
+                                     starDimension="40px"
+                                     starSpacing="15px"
+                                 />
                                 </div>
-                                <div class="col">
-                                    <img class="img-circle" src={hotel} alt="Cinque Terre" width="304" height="236" />
-                                </div>
-                                <div class="col">
-                                    <button class="btn btn-primary mx-3">View Details</button>
-                                    <button class="btn btn-success mx-3">Book Room</button>
-                                </div>
-                            </div>
+                                 <div class="col">
+                                 <img class="img-circle" src={hotel} alt="Cinque Terre" width="304" height="236" />
+                             </div>
+                             <div class="col">
+                                 <button class="btn btn-primary mx-3">View Details</button>
+                                 <button class="btn btn-success mx-3">Book Room</button>
+                             </div>
+                             </div>:null
+                                ))}
+
+                                   
+                               
 
 
                         </div>
                     </div>
                 </div>
 
+                <BookRoom modal={modal} toggle={this.toggle}/>
 
             </div>
         );
     }
 }
 
-export default ViewPage;
+export default withRouter(ViewPage);

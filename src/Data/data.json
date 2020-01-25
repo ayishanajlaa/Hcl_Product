@@ -1,0 +1,8 @@
+[
+    { "name":"Taj Hotel","location":"goa","price":700,"rating":3},
+    { "name":"Lakshmi Hotel","location":"goa","price":600,"rating":5},
+    { "name":"Suraj Hotel","location":"delhi","price":500,"rating":1},
+    { "name":"Sam Hotel","location":"delhi","price":300,"rating":2}
+
+
+]
