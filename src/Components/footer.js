@@ -1,18 +1,19 @@
-import React, {Component} from 'react';
-import Logo from "./logo.png" ;
+import React, { Component } from 'react';
 
 
-class Footer extends Component{
-    render(){
-         return (
-        <div className="footer" >
-            <img  src={Logo}></img>
-            </div>
-      );
-        
+class Footer extends Component {
+    render() {
+        return (
+            <>             
+                <div>
+                    <h3> &copy; Travel Easy</h3>
+                </div>
+            </>
+        );
+
     }
 }
- 
+
 
 
 export default Footer;
