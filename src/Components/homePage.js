@@ -7,6 +7,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 
 
+
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
@@ -77,7 +78,10 @@ class HomePage extends React.Component {
         <Button onClick={() => { this.props.history.push('/view') }}>Submit</Button>
       </div>
     );
+
   }
+
+ 
 }
 
 export default withRouter(HomePage);

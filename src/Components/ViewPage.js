@@ -1,13 +1,24 @@
 import React from 'react';
 import StarRatings from 'react-star-ratings';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input } from 'reactstrap';
-
-
+import GoogleMapReact from 'google-map-react';
 import hotel from '.././Data/Images/download (2).jpg'
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
+
+
+
 
 
 class ViewPage extends React.Component {
+    static defaultProps = {
+        center: {
+          lat: 59.95,
+          lng: 30.33
+        },
+        zoom: 11
+      };
     render() {
+
         return (
             <div class="row align-items-center mx-5 my-5">
                 <div>
@@ -33,7 +44,7 @@ class ViewPage extends React.Component {
                 </div>
                 <br>
                 </br>
-                
+               
                 <div class="row">
 
                 </div>
