@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Components/header'
 import {
   Switch,
   Route,
@@ -9,6 +10,7 @@ import Home from './Components/homePage'
 function App() {
   return (
     <div className="App">
+      <Header/>
      <Switch>
           <Route exact path="/">
             <Home />
