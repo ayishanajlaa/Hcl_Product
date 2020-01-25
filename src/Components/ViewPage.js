@@ -31,7 +31,9 @@ class ViewPage extends React.Component {
               <option>5 Star</option>
             </Input>
                 </div>
-             
+                <br>
+                </br>
+                
                 <div class="row">
 
                 </div>
