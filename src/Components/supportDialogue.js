@@ -7,30 +7,27 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter,FormGroup,Label,Inpu
     constructor(props) {
         super(props);
         this.state = {
-           modal:false,
+           modal:this.props.modal,
           };
-        this.toggle = this.toggle.bind(this);
         this.submit = this.submit.bind(this);
 
       }
 
-      toggle(){
-          this.setState({modal:!this.state.modal})
-      }
+    
 
       submit(){
           alert("Submitted Sucessfully")
-          this.setState({modal:!this.state.modal})
+          this.props.toggle()
 
       }
  
  
   render() {
-    const { modal } = this.state;
+    const { modal } = this.props;
     return (
       <div>
-           <Modal isOpen={modal} toggle={this.toggle} >
-        <ModalHeader toggle={this.toggle}>Contact Us</ModalHeader>
+           <Modal isOpen={modal} toggle={this.props.toggle} >
+        <ModalHeader toggle={this.props.toggle}>Contact Us</ModalHeader>
         <ModalBody>
           <p>Email:<b>TravelEasy@gmail.com</b></p>
           <p>Phone:<b>9996667656</b></p> 
@@ -51,7 +48,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter,FormGroup,Label,Inpu
 
         </ModalBody>
         <ModalFooter>
-          <Button color="danger" onClick={this.toggle}>Cancel</Button>{' '}
+          <Button color="danger" onClick={this.props.toggle}>Cancel</Button>{' '}
           
         </ModalFooter>
       </Modal>
