@@ -6,7 +6,7 @@ import {
   Route,
 } from "react-router-dom";
 import './App.css';
-import Home from './Components/homePage'
+import Home from './Components/ViewPage'
 import Support from './Components/supportDialogue'
 
 function App() {
