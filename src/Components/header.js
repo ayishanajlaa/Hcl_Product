@@ -23,7 +23,6 @@ class Header extends Component{
         <div className="header" >
             <img sizes='40px' src={Logo}></img>
             </div>
-        
       );
         
     }
