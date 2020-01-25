@@ -39,8 +39,8 @@
 
 .header {
   padding: 1px;
-  text-align: center;
-  background: #1abc9c;
+  text-align: left;
+  background: #0066ff;
   color: white;
   font-size: 10px;
 }
