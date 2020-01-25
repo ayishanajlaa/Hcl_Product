@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Logo from "./logo.png" ;
 import Support from './supportDialogue'
+import { withRouter } from 'react-router-dom';
+
 
 
 
@@ -28,7 +30,7 @@ toggle(){
     return (
       <div>
         <nav class="navbar navbar-light bg-light">
-          <a class="navbar-brand">Travel Easy</a>
+          <a class="navbar-brand" style={{"cursor":"pointer"}}  onClick={() => { this.props.history.push('/') }}>Travel Easy</a>
           <ul class="navbar-nav">
             <li class="nav-item active">
               <a class="nav-link" onClick={this.support}>Support <span class="sr-only"></span></a>
@@ -45,4 +47,4 @@ toggle(){
  
 
 
-export default Header;
+export default withRouter(Header);
