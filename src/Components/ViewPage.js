@@ -5,9 +5,12 @@ import BookRoom from './bookRoom'
 import data from "../Data/data"; 
 
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input } from 'reactstrap';
-
-
+import GoogleMapReact from 'google-map-react';
 import hotel from '.././Data/Images/download (2).jpg'
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
+
+
+
 
 const Hotel=data
 
@@ -53,7 +56,7 @@ class ViewPage extends React.Component {
                 </div>
                 <br>
                 </br>
-                
+               
                 <div class="row">
 
                 </div>
