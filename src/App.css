@@ -39,17 +39,18 @@
 
 .header {
   padding: 1px;
-  text-align: center;
-  background: #1abc9c;
+  text-align: left;
+  background: #0066ff;
   color: white;
   font-size: 10px;
 }
-
-.footer{
-  width: 100px;
-  height: 100px;
-  text-align: left;
-  background: #0066ff;
-  color: blue;
-  font-size: 5px;
+.button {
+  background-color:white; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: right;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
