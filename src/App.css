@@ -44,3 +44,12 @@
   color: white;
   font-size: 10px;
 }
+
+.footer{
+  width: 100px;
+  height: 100px;
+  text-align: left;
+  background: #0066ff;
+  color: blue;
+  font-size: 5px;
+}
