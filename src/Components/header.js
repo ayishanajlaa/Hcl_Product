@@ -8,8 +8,8 @@ class Header extends Component{
          return (
         <div className="header" >
             <img src={Logo}></img>
-         </div>
-        
+            <button class="button">Support</button>
+        </div>
         
       );
         
